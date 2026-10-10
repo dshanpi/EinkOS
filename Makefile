@@ -87,3 +87,17 @@ clean:
 	rm -rf $(BUILD_DIR) eink-dashboard eink-connectd
 
 -include $(APP_OBJS:.o=.d) $(CONNECT_OBJS:.o=.d) $(LVGL_OBJS:.o=.d)
+
+# Separate host objects keep screenshot capture independent of ARM build artifacts.
+PREVIEW_SRCS := tools/ui_capture.c src/ui.c src/lunar.c src/settings.c src/font_cjk_16.c
+PREVIEW_OBJS := $(patsubst %.c,$(BUILD_DIR)/app/%.o,$(PREVIEW_SRCS))
+-include $(PREVIEW_OBJS:.o=.d)
+.PHONY: screenshots ui-capture
+ui-capture: $(BUILD_DIR)/ui-capture
+$(BUILD_DIR)/ui-capture: $(PREVIEW_OBJS) $(LVGL_OBJS)
+	$(CC) $^ $(LDFLAGS) $(LDLIBS) -o $@
+screenshots:
+	$(MAKE) BUILD_DIR=build/preview CC="$(HOSTCC)" SYSROOT= CFLAGS="-O2" LDFLAGS= ui-capture
+	mkdir -p build/preview/frames
+	build/preview/ui-capture build/preview/frames
+	python3 scripts/screenshots.py

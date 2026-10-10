@@ -8,3 +8,7 @@
 
 新贡献采用 GPL-3.0-only；引入第三方代码时保留其来源及许可证。
 不要提交编译产物、固件、个人网络信息或设备状态文件。
+
+开发约束和工作流见 [DEVELOPMENT](docs/DEVELOPMENT.md)、[AGENTS.md](AGENTS.md)
+与 [项目开发技能](skills/einkos-development/SKILL.md)。UI 变更需要更新实际源码渲染截图，
+并运行 `python3 scripts/check_docs.py`。发布需通过 [门禁](docs/RELEASING.md)。

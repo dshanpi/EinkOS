@@ -63,7 +63,8 @@ def main():
     installed_commit = (installed / 'SOURCE_COMMIT').read_text().strip()
     if installed_commit != commit:
         p.error('Root filesystem application commit does not match this source.')
-    if args.image.stat().st_mtime < (installed / 'SOURCE_COMMIT').stat().st_mtime:
+    if args.image.stat().st_mtime < max((installed / 'SOURCE_COMMIT').stat().st_mtime,
+                                      int(git('show', '-s', '--format=%ct', 'HEAD'))):
         p.error('Image predates the installed application; rebuild and pack first.')
     report = json.loads(args.validation.read_text())
     if report.get('image_sha256') != sha256(args.image):
@@ -93,7 +94,7 @@ def main():
         'image_sha256': sha256(args.image), 'compressed_sha256': sha256(image),
         'application_source_sha256': sha256(source),
         'hardware_validation_complete': validation_complete(report),
-        'release_channel': 'stable' if validation_complete(report) else 'prerelease',
+        'release_channel': 'candidate',
     }
     (args.output / 'build-info.json').write_text(json.dumps(metadata, indent=2) + '\n')
     (args.output / 'validation.json').write_text(json.dumps(report, indent=2) + '\n')

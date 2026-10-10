@@ -1,0 +1,126 @@
+{
+  "method": "Actual LVGL 8.3.1 memory framebuffer; production ui.c and fonts; EPD threshold",
+  "hardware_capture": false,
+  "size": [
+    240,
+    360
+  ],
+  "data": "Fixed demo clock, fictional networks/devices/stats/text; no live device data",
+  "inputs": {
+    "src/ui.c": "ae4d2d45463317666453d757263e27f717e14b3e28515c8d4608816595e4919e",
+    "src/ui.h": "44a2b93ac32969629895ca85d4e068cbf94d908665be6ac6cefd9d198fdf2bb2",
+    "src/lunar.c": "c6eeee94082e6e4c2fabcbe8af60927ffa1988811f6235b26510b0c444ecef4c",
+    "src/settings.c": "95e43ecec4a1ad5a21f9ed59ddbe920649abe557c3f6052886990577f07512f9",
+    "src/font_cjk_16.c": "64f7eeb0080eccb0c2ce7864c14f7add123ca21ceb64a3a2ff7eef0285abcccb",
+    "src/lv_conf.h": "ea82979b128ae846568ff2f122893b12e3c696bc3f339b0a4eaf58c238bbefcb",
+    "tools/ui_capture.c": "0c6b8ec545ebe47c45106420a0142f6ef39b951331f6b558f9e50e90acd88b6a",
+    "VERSION": "e9dd8507f4bf0c6f42458e41aea833ad0bd3f6127272335eee9bf4d58541ed67",
+    "platforms/tina/epd_disp.c": "d155011c53a0c13f468849ca7ba9a5d62c2a7074b12d8b91fc85eacda1a86c84"
+  },
+  "images": [
+    {
+      "file": "01-home.png",
+      "sha256": "0581638e0953adf86d5acf932d90d69f09791411817cab2089bb86a9fc3b20d5"
+    },
+    {
+      "file": "02-home-en.png",
+      "sha256": "938fc4a5e75b35665d7cd62aac4f3b56cabe9d7bc371b1717747c0a2f6f008a5"
+    },
+    {
+      "file": "03-time-restored.png",
+      "sha256": "2efb236a4f29f4235bc0c0b68b4cb3f79efeabe0af4202899d8fa098c590dd48"
+    },
+    {
+      "file": "04-time-unset.png",
+      "sha256": "0d47145e62ebe2eb6632a3f123019dd8e9b43e15b4794293ebaf6ea7ac175f1f"
+    },
+    {
+      "file": "05-calendar.png",
+      "sha256": "69dc96120cb4421ca12bb101da6bef45f26c7343198531d797086558025db67d"
+    },
+    {
+      "file": "06-calendar-next.png",
+      "sha256": "352b28970be7f59ec29fc50a5e9b67a07f666990bed2e0981f52f7ff4077b611"
+    },
+    {
+      "file": "07-reader-empty.png",
+      "sha256": "c8229649617312d0e07f5dca5750eaf3758fe97d7d63ca3bced2183d984b9392"
+    },
+    {
+      "file": "08-library.png",
+      "sha256": "ccee9d023968da3224e5220d23c1297852dd509eb6cbeaf67def01359ba03c71"
+    },
+    {
+      "file": "09-reader.png",
+      "sha256": "39645a5a2a20968c8ee4e5269d75ce015243a533b2efc55f1dabdf6f5b5bfa2d"
+    },
+    {
+      "file": "10-reader-bookmark.png",
+      "sha256": "cf4049d31a6c9b67b8ec97fff94bef6da204dc7423470b99234462361dd2221c"
+    },
+    {
+      "file": "11-reader-menu.png",
+      "sha256": "6f95d01361c9e585cf092974311c1186e71c02d895071f037e71c65cc89e946b"
+    },
+    {
+      "file": "12-connect.png",
+      "sha256": "740c3f3be9d64b08ad6dbbfb42c6c00087b32cbb283fffebc2d1e591cd1811d9"
+    },
+    {
+      "file": "13-wifi.png",
+      "sha256": "710541e9a65c82daa94de7dbfb5db4109df2cd57bcf2ec36682ee184ef235c69"
+    },
+    {
+      "file": "14-wifi-portal.png",
+      "sha256": "1a0ee0bff60f5830da0af147fdfa7b73e4ecbb564b6659572171caa78dd24019"
+    },
+    {
+      "file": "15-wifi-failure.png",
+      "sha256": "79ab48b020adb8d123f6751da2afecd90462df5a4aa7af9f5b6a63b7239a68d3"
+    },
+    {
+      "file": "16-bluetooth.png",
+      "sha256": "9395bd5e1d039a29c8c34980cb0adc2c79b9d79a8e2419ad4748b83e12c5e8f8"
+    },
+    {
+      "file": "17-bluetooth-scan.png",
+      "sha256": "e6aec56939fe0cfb75ced76409a9e9b546dd5a8cfefa457ba3f42f8d2c394f02"
+    },
+    {
+      "file": "18-bluetooth-confirm.png",
+      "sha256": "c947213b2bd7792f35af42220a3f04a8f966382a08eb02751be4f85b910ecd2f"
+    },
+    {
+      "file": "19-bluetooth-pin.png",
+      "sha256": "04b5702b16371ccc1bc92762078ba749a0223ec287166d732adcc28cb1aa604f"
+    },
+    {
+      "file": "20-bluetooth-unavailable.png",
+      "sha256": "c93ddce92ba2ef9b0444d53dd9d26d31125134e9c9b343fdf6ff077f9dabff5d"
+    },
+    {
+      "file": "21-more.png",
+      "sha256": "e2b8a1ae8bfa022e2142d4f96ff1bf2c1bd885fc6779cff7e588854b8b92feee"
+    },
+    {
+      "file": "22-resources.png",
+      "sha256": "f33218618cb3235575bb98ad9d3eb40821d594f285eff178f776942527a46710"
+    },
+    {
+      "file": "23-diagnostics.png",
+      "sha256": "d95918ffdf7510456a989014d9c239e7da553b0ad241574a33fc57577e5ff95f"
+    },
+    {
+      "file": "24-diagnostics-error.png",
+      "sha256": "379e05a811585587f36d18ddddeadce20f11eb136026695060d7b7e7d4e25f15"
+    },
+    {
+      "file": "25-settings.png",
+      "sha256": "c856f22d5209d9695a6c85a5fdf07598efdc006c26310801548a328f7f738dfb"
+    },
+    {
+      "file": "26-about.png",
+      "sha256": "a2cf26c5bb3d771498c4b468f792c1a1b89eb272d7c755472057d28e8981a16e"
+    }
+  ]
+}

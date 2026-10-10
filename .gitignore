@@ -6,3 +6,6 @@ __pycache__/
 *.pyc
 *.o
 *.d
+/output/
+/.playwright/
+/.playwright-cli/

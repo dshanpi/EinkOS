@@ -8,6 +8,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: make test
+      - run: make -j2 screenshots
+      - run: python3 scripts/check_docs.py
+      - run: git diff --exit-code -- docs/screenshots
       - run: make -j2 eink-dashboard
       - run: ./eink-dashboard --version
       - run: python3 scripts/source_archive.py --output dist

@@ -1,0 +1,26 @@
+{
+  "method": "Chromium capture of actual connectd.c HTML templates; fictional SSIDs; no network commands",
+  "viewport": [
+    390,
+    760
+  ],
+  "hardware_capture": false,
+  "inputs": {
+    "platforms/tina/connectd.c": "c06f76cc1dd2903bf48ae8ab08dfcd07f0720052fc0cb53c3befa245ccdc18b1",
+    "scripts/screenshots.py": "5b68e7e32332d95161b58650dfee4b58d44b617e101d92df2fbeb78f1e3ebab2"
+  },
+  "images": [
+    {
+      "file": "27-phone-portal.png",
+      "sha256": "ce1d11af88a1ab21f28551d60af4c64bc9c092438c95c72ba9d5be97be7ec25d"
+    },
+    {
+      "file": "28-phone-success.png",
+      "sha256": "ba60043803e37830cc10249875fdbb4d7232855f321594260b1c9f6e91d3097b"
+    },
+    {
+      "file": "29-phone-failure.png",
+      "sha256": "d522f8b936f3b281ce590aa78f31e50f29379b6ba13d612d7a8b905b7ee76a4b"
+    }
+  ]
+}

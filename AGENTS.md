@@ -1,0 +1,16 @@
+# EinkOS repository guidance
+
+- Application source, user-space adapters, runtime service files, screenshots and documentation live here.
+  Kernel drivers, device trees, bootloader, board configuration and the OpenWrt package recipe live in the
+  [hardware repository](https://github.com/DongshanPI/100ASK_T113-PRO_TinaSDK5/tree/einkos-240x360).
+- Use the relevant workflow in [the project skill](skills/einkos-development/SKILL.md) for application,
+  screenshot or release work. Detailed requirements: [DEVELOPMENT](docs/DEVELOPMENT.md).
+- Preserve installed paths, state formats, the local protocol and the EPD ABI unless the task includes a migration.
+- UI changes require regenerated production-rendered screenshots and visual review. Capture tools use
+  fictional fixtures; never start the production network daemon on the host just for screenshots.
+- Run `make test` for logic/tooling changes, `make screenshots` for UI changes, and
+  `python3 scripts/check_docs.py` for documentation/gallery changes. Cross-compile product code changes.
+- Source packages and images must match recorded commits. Documentation HEAD may be newer than a firmware release.
+  Use [release gates](docs/RELEASING.md); never label missing hardware tests as passed or drafts as public downloads.
+- Firmware binaries belong in GitHub Release assets, not Git. Installation points users to
+  https://github.com/dshanpi/lynx-releases. Preserve third-party licenses and don't commit personal device data.
