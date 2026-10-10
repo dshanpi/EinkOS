@@ -1,0 +1,631 @@
+[
+  {
+    "path": "buildroot/buildroot-201902",
+    "commit": "3f77d27b71a22ecd01cedbca9826a0442fa0bcab",
+    "tracked_changes": [
+      "M configs/sun8iw20p1_t113_nand_defconfig"
+    ]
+  },
+  {
+    "path": "buildroot/config",
+    "commit": "bd899189f0a9c3ebf3617f5f1af1f4f664de49e6",
+    "tracked_changes": []
+  },
+  {
+    "path": "brandy/brandy-2.0/spl-pub",
+    "commit": "f5e757acae3b711e6cb74c70962a351191266a68",
+    "tracked_changes": []
+  },
+  {
+    "path": "brandy/brandy-2.0/tools",
+    "commit": "ac42021deea69bee808dec8dec71c9457bd8fa14",
+    "tracked_changes": []
+  },
+  {
+    "path": "brandy/brandy-2.0/u-boot-2018",
+    "commit": "ce06dac482586d72e9366729fb53ffd907b92c4f",
+    "tracked_changes": []
+  },
+  {
+    "path": "bsp",
+    "commit": "73ca56dfc64d5af1fc72973433a370983cfb8748",
+    "tracked_changes": []
+  },
+  {
+    "path": "build",
+    "commit": "2e8281342e9932b4680bfeea6b449581daebb164",
+    "tracked_changes": []
+  },
+  {
+    "path": "device/config/chips/t113_i",
+    "commit": "edfaac6423aa23c1767532573a06253c0fa8e691",
+    "tracked_changes": []
+  },
+  {
+    "path": "device/config/common",
+    "commit": "25fc7f574c1680481779a0bd4bcaffbcd0189ad6",
+    "tracked_changes": []
+  },
+  {
+    "path": "device/config/rootfs_tar",
+    "commit": "172a8c898624331140a895da514122ee2f5e568c",
+    "tracked_changes": []
+  },
+  {
+    "path": "device/config/chips/t113",
+    "commit": "4c094a5ff1f1875d934dbd8ec5a3b41960032a8b",
+    "tracked_changes": [
+      "M bin/amp_dsp0.bin",
+      " M bin/optee_sun8iw20p1.bin",
+      " M configs/default/boot_package.cfg",
+      " M configs/evb1_auto_nand/linux-5.4/board.dts",
+      " M configs/evb1_auto_nand/linux-5.4/config-5.4",
+      " M configs/evb1_auto_nand/openwrt/env.cfg",
+      " M configs/evb1_auto_nand/sys_config.fex",
+      " M configs/evb1_auto_nand/uboot-board.dts"
+    ]
+  },
+  {
+    "path": "device/config/chips/t113_s3p",
+    "commit": "7f811fdf48c219ec3426301ed8a00187cbdcc1be",
+    "tracked_changes": []
+  },
+  {
+    "path": "device/config/chips/t113_s4",
+    "commit": "19a0653952ff2455186a04756097bd1248bb317d",
+    "tracked_changes": []
+  },
+  {
+    "path": "device/config/chips/t113_s4p",
+    "commit": "aef1f610100b85e420e8934b8d85ce583eb933a9",
+    "tracked_changes": []
+  },
+  {
+    "path": "device/config/chips/t113s2",
+    "commit": "40313dc4ee48c86b9371853293821ca63213da24",
+    "tracked_changes": []
+  },
+  {
+    "path": "rtos/lichee/dsp",
+    "commit": "c90ed8f7ca3e3de036aae91b0ccb91bd0bfb85ca",
+    "tracked_changes": []
+  },
+  {
+    "path": "kernel/linux-5.10-origin",
+    "commit": "88655273ec3c484511052ba4e65e894f006ad62d",
+    "tracked_changes": []
+  },
+  {
+    "path": "kernel/linux-5.10-rt",
+    "commit": "76748c16f1078398e971f56266a0864b5882e750",
+    "tracked_changes": []
+  },
+  {
+    "path": "kernel/linux-5.10-xenomai",
+    "commit": "851c87123b97366aaf11b3576eccdbf100d7f83c",
+    "tracked_changes": []
+  },
+  {
+    "path": "kernel/linux-5.4",
+    "commit": "b48025609328be3d67e112bdb630ef7128ddfec0",
+    "tracked_changes": [
+      "M drivers/misc/Kconfig",
+      " M drivers/misc/Makefile",
+      " M drivers/mtd/awnand/spinand/physic/id.c"
+    ]
+  },
+  {
+    "path": "tools",
+    "commit": "5aea5238ad6bb4acac91035908cf0b349d70180c",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/multimedia/libcedarc",
+    "commit": "18fe6cf9a0e760ff8da11d333991fb91682c4036",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/multimedia/libcedare",
+    "commit": "1d31e5a03513f75fdddecaf1fa4234ff550f179f",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/multimedia/libcedarx",
+    "commit": "8a94945d837dbb4443fb46db97f42a25c996ef55",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/display/pqd",
+    "commit": "6ec0df333b80d3f76fe1da4763a247b893b4f870",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/usb/adbd",
+    "commit": "8d692cc474a9f17dac278778f6617edd23441b07",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/system/amp_shell",
+    "commit": "8680daebc4caffb61854db6ecc8e1ea4c2ec8780",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/utils/boot-play",
+    "commit": "a7c522c370f9118b444eabc06c5624a3c248db83",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/wireless/btmanager",
+    "commit": "7ad24f584fef9c075a887e4119073ede6bcf7b10",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/utils/cpu_monitor",
+    "commit": "9e1b6629a35f8abb7ba4bea0c4a971dcab54046c",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/display/g2d-sample",
+    "commit": "a403fc4a2e099a62c6c6cb1fd1bc70f49e970a9d",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/power/healthd",
+    "commit": "1d4e55d7b659a2b19552d58d60f18762e741f804",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/common/libawion",
+    "commit": "3951f2626ec700cc7259ea698202ea065300bada",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/common/libbase",
+    "commit": "61765f55d4e4a161b487fa5591be1755dc29f3b6",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/multimedia/libcedarse",
+    "commit": "5e21ffce5ea13a99d5dcbea610e1813841185383",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/thirdparty/libs/libcutils",
+    "commit": "1a35f290f78db346b2a0fac9864590f4ec5218a0",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/common/libkey",
+    "commit": "69406dbaaf8d79337fcc805d5ff1620f8c5341f5",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/system/rpmsg",
+    "commit": "425451a28bd68f57fdcadedeed590e8785c7f53e",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/utils/libsocket_db",
+    "commit": "243c6a37ab868ab6f40b4a3629a9810866e8cff5",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/display/libuapi",
+    "commit": "e851dbebd20cb588af26c6131987c3c04b9d32ed",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/thirdparty/gui/lvgl-8",
+    "commit": "e8677a22243f0f2dcc341f70908817ab1b3f0d31",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/utils/mtop",
+    "commit": "8a7dbb4c7574f060ac727f57a812e93eeb75ca16",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/usb/mtp",
+    "commit": "0511468a30249c7c4823780a02059a4f3c16f8bc",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/multimedia/libtmedia",
+    "commit": "80b6b760fbb0f72c77f6c9bd70f396c0aed3de6a",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/multimedia/multimedia_demo",
+    "commit": "877d3c90d71a03164fce73904d09b55672a03c24",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/system/ota-burnboot",
+    "commit": "3e04b365a89e565c637c21f3f923b4024ab605b2",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/power/powerkey",
+    "commit": "1dd556583515a4da5db7963340d24c51bd17aaa9",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/thirdparty/gui/qt",
+    "commit": "69626c435a06f80bccea1df69f5ea990944e2efc",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/system/rpbuf",
+    "commit": "3e91b7f0f37360c6b0f7bb29bbcc4a52dac94a3c",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/usb/setusbconfig",
+    "commit": "e3df8a966c31f1c3d5042b4812483b28dd1b61dd",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/thirdparty/utils/stressapptest",
+    "commit": "bf6d825036d8938756d60873c04a0dada511b5bc",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/utils/uevent-monitor",
+    "commit": "c3db1666fef2ce87bc07cd9400f97af79b8ac6fd",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/wireless/wifimanager",
+    "commit": "39724d8dcdbf1e7f114b646ab0454e9ec246a434",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/wireless/common",
+    "commit": "e102f176eeb936d6d40af86dfa5604ecb507129d",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/wireless/firmware",
+    "commit": "611e8ca4a018bfe4c75450ce57a7669188e63fe8",
+    "tracked_changes": []
+  },
+  {
+    "path": "rtos/lichee/rtos-components",
+    "commit": "aff924c7aefa360580a3c38106455cf740a58d6b",
+    "tracked_changes": []
+  },
+  {
+    "path": "rtos/board/t113_i_c906",
+    "commit": "fb1526e9b9404f49f08663bc7d4b2710cf7e7b27",
+    "tracked_changes": []
+  },
+  {
+    "path": "rtos/board/t113_c906",
+    "commit": "32df00b7ba3cb0e526d6e02141de928693a7e3d3",
+    "tracked_changes": []
+  },
+  {
+    "path": "rtos/board/t113_s3p_c906",
+    "commit": "64c1a3d6acf2a605f93c715e48e15ac74091cb7b",
+    "tracked_changes": []
+  },
+  {
+    "path": "rtos/board/t113_s4_c906",
+    "commit": "b4d33bd37b5f2e2244a815b8fab666bc9a7f4ead",
+    "tracked_changes": []
+  },
+  {
+    "path": "rtos/board/t113_s4p_c906",
+    "commit": "d49cf980ad969d1567c499e9de542a51769119fc",
+    "tracked_changes": []
+  },
+  {
+    "path": "rtos/lichee/rtos-hal",
+    "commit": "e156c0bf6ed5ed054768ffc4046828ee1e7b3116",
+    "tracked_changes": []
+  },
+  {
+    "path": "rtos/tools",
+    "commit": "dc61515b01695577a03d5b8f1de4da4f8aaced65",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/build",
+    "commit": "162b31e45f385780b8a8b1f4389a463285b3eb96",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/dl",
+    "commit": "8b3d8f364bb255a16e5e31e6cd007a7b4b302f90",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/openwrt",
+    "commit": "2c95a1d80267eac8c2cfe8cd23128b9e4eb81c7b",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/audio/aactd",
+    "commit": "c4817fe0c0752a6fe09984df239abc34731397cb",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/audio/aactd-lib",
+    "commit": "0dcdbb43c63cb081adea7b9cfffcdc369ad95f6a",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/usb/adbd",
+    "commit": "59784c990d73323ffd34d962aee3e118688ffacd",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/audio/alsa-plugins-aw",
+    "commit": "23101aa48b21f3576562307e955ced6b036af339",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/audio/audio-process",
+    "commit": "400bf88dc40ca8f215915b65d80c3e8bf725b5cd",
+    "tracked_changes": []
+  },
+  {
+    "path": "buildroot/package/allwinner/auto",
+    "commit": "6d4b75f8a19a59f27529ea41ef97582f1f0b0a21",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/audio/awrpaf",
+    "commit": "5548731bf84f6578ebbf4c5f9be6a5d9e87fb0ee",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/display/boot-play",
+    "commit": "e7bbdc1fe8c684b46460b73f766660909b7e97fa",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/wireless/btmanager",
+    "commit": "109e1f4c291e64f5a61bc459d0c758078f237b76",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/system/busybox-init-base-files",
+    "commit": "1ff807bc27c9f24963d8d46053516efaf7a33511",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/vision/camerademo",
+    "commit": "7fee18b76cb2e8fcecd9aae5d00b5df085ed5536",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/common",
+    "commit": "78fbc3c5d962cf9f9bcae1d5a2db33548368c778",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/display/g2d-sample",
+    "commit": "a0334a32682422a0b274abcbee47ac96495583a0",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/power/healthd",
+    "commit": "45af3714a810c526d4a64f8fc3970ccfe4599519",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/other/ir_test",
+    "commit": "8f2cf4dc2a432519dc439c58b1eb3522389de42b",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/other/liballwinner-base",
+    "commit": "a22526d93ce01a35fa3b7415615ada0703fc86f5",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/display/libuapi",
+    "commit": "7d21aaedaac4f4892d19e08a9cdcc48a1870fd68",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/usb/mtp",
+    "commit": "b824eaec724e1728feb6582b572d3a5f74d5e474",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/power/nativepower",
+    "commit": "83f817c03708d3a5371231378c6b5bdb195c1e1e",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/system/ota-burnboot",
+    "commit": "36cc6978ad46299588845d2455b6884cd82b1152",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/display/pqd",
+    "commit": "ba146da06ece81f8d582b4e251ffba0a4da20941",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/security",
+    "commit": "663f8a694d3b167dafd955f9ce03a1ff516ecd79",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/usb/setusbconfig",
+    "commit": "6dd812fc6a841c208d62ccbca9bc45fe6294ef03",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/system/swupdate",
+    "commit": "c3a79e73f8cfa5d81fc154857f6ce4aca7f62a7e",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/testtools/testapk",
+    "commit": "adca8b0868f2bcb3c06c6ae71728236cb113a5ad",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/testtools/testdata",
+    "commit": "40b6de365e3379bf64dd0a6d34f65d5e7e3b0728",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/multimedia/tina_multimedia",
+    "commit": "ba97e4a383a4eb331e892579285a91dd289c74e0",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/multimedia/tina_multimedia_demo",
+    "commit": "5f60895c56ae317de18ae70e5f24305bfe0437e6",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/testtools/tinatest",
+    "commit": "ebb2ed8f626e4e373462d99b608f8ff3a1903982",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/audio/tinymp3",
+    "commit": "9f7b2a41285a742bb4f4ebee0f2ca13e316586c4",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/other/uart_test",
+    "commit": "87d9aa16c1b06cea6100cd9da06a18548bba1d4f",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/other/uevent-monitor",
+    "commit": "7bd3ce007fb1137453b14b4cbba6223b03d4fdba",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/wireless/wifimanager",
+    "commit": "2d4da6de15bd08a094ec34f84011ea48daaf14a0",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/wireless/common",
+    "commit": "528ab035529dae17bbbe038a2f6cd60f8c50ff43",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/allwinner/display/yuview",
+    "commit": "982bf2b3c3465cac13793cd40cb9043f55be9112",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/feeds",
+    "commit": "e2d2733226891f8a59139e7a7f6b9da4a1ecf7d6",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/thirdparty/multimedia/bluez-alsa",
+    "commit": "5762ce6e6d5241d4ffc9f75943e4b349af293a8c",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/thirdparty/gui/directfb",
+    "commit": "fb353e2bf680160361b9c8621209aa430fd26659",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/thirdparty/gui/flutter",
+    "commit": "44092432754857de0409f37790c7057080b242ae",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/thirdparty/multimedia/gstreamer",
+    "commit": "445fa2485433b54cafe3bb50a0f540d94e7992ea",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/thirdparty/gui/lvgl-6",
+    "commit": "61bd8d85f0b589b68535c0172b45baad6aa4f806",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/thirdparty/gui/lvgl-8",
+    "commit": "3a4b86309d97ae46b3e966bd02ea9cabbcf452e0",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/thirdparty/modules",
+    "commit": "887b1543d7f9bcf4646f66faf89588393b312286",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/thirdparty/gui/qt",
+    "commit": "6fe01df9a5daa377725e0b1d0fa414f78deb0c23",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/package/thirdparty/security",
+    "commit": "69fba2e2863e58dfbf396eb9583089522a6e5d1d",
+    "tracked_changes": []
+  },
+  {
+    "path": "prebuilt/rootfsbuilt/arm",
+    "commit": "f344bc970f47b62af8582f99295c0a6e023711f5",
+    "tracked_changes": []
+  },
+  {
+    "path": "prebuilt/hostbuilt",
+    "commit": "874888d1ffee5b2c00a5ffe5126c9f094bbeae5a",
+    "tracked_changes": [
+      "M linux-x86/bin/tar"
+    ]
+  },
+  {
+    "path": "prebuilt/kernelbuilt/arm",
+    "commit": "39c68b1e30de4496ae77aca23d22106132a5f349",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/target/t113",
+    "commit": "cf160db7753ec37bd6d837c3ce929ce3aea11526",
+    "tracked_changes": [
+      "M t113-evb1_auto_nand/defconfig"
+    ]
+  },
+  {
+    "path": "openwrt/target/t113_i",
+    "commit": "e548f4f52c9ad0745b0d3c1397266a4cdd8a91be",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/target/t113_s3p",
+    "commit": "f6b01cfc8c473ac0496124713fb17cbaa94fc534",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/target/t113_s4",
+    "commit": "d76f0a4ab8fdeab72512bf40dfce15ac40c05c1d",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/target/t113_s4p",
+    "commit": "7b70226ff416dc103932f9af51843b042234d2a7",
+    "tracked_changes": []
+  },
+  {
+    "path": "openwrt/target/t113s2",
+    "commit": "38c9a6d0adc63b043c9cb940209148afb19c186e",
+    "tracked_changes": []
+  },
+  {
+    "path": "rtos/lichee/rtos",
+    "commit": "276abec826ecf346fa3705e98245082b313d0efa",
+    "tracked_changes": []
+  },
+  {
+    "path": "platform/allwinner/security/optee",
+    "commit": "57d7346f3c2f5e7b75bffff34e1ad474cdf03416",
+    "tracked_changes": []
+  }
+]

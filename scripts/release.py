@@ -9,6 +9,7 @@ import shutil
 import subprocess
 import xml.etree.ElementTree as ET
 from source_archive import ROOT, archive, git
+from version_lock import write_lock
 
 BOARD = '100ask-t113-pro-240x360'
 REQUIRED_CHECKS = ['cold_boot', 'keys', 'display_refresh', 'reader_resume',
@@ -98,7 +99,8 @@ def main():
     }
     (args.output / 'build-info.json').write_text(json.dumps(metadata, indent=2) + '\n')
     (args.output / 'validation.json').write_text(json.dumps(report, indent=2) + '\n')
-    files = [source, image, args.output / 'build-info.json', args.output / 'validation.json']
+    lock = write_lock(args.output, args.hardware)
+    files = [source, image, args.output / 'build-info.json', args.output / 'validation.json', lock]
     (args.output / 'SHA256SUMS').write_text(''.join(f'{sha256(f)}  {f.name}\n' for f in files))
     print(f'Prepared {metadata["release_channel"]} assets in {args.output}')
 

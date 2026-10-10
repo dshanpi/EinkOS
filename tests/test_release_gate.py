@@ -10,6 +10,7 @@ import unittest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from check_release import check_assets, BUILD_CHECKS
 from release import BOARD, REQUIRED_CHECKS, sha256
+from version_lock import HARDWARE, make_lock
 
 
 class GateTests(unittest.TestCase):
@@ -27,16 +28,24 @@ class GateTests(unittest.TestCase):
                 member.size = len(value)
                 archive.addfile(member, io.BytesIO(value.encode()))
         self.info = {'version': '0.1.0', 'application_commit': 'a' * 40, 'board': BOARD,
-                     'hardware': {'commit': 'b' * 40}, 'image_sha256': hashlib.sha256(payload).hexdigest(),
+                     'hardware_repository': HARDWARE,
+                     'hardware': {'commit': 'b' * 40, 'tracked_changes': []},
+                     'sdk_projects': [{'path': 'kernel/linux-5.4', 'commit': 'c' * 40, 'tracked_changes': []}],
+                     'chip': 't113', 'board_config': 'evb1_auto_nand', 'kernel': 'linux-5.4',
+                     'rootfs': 'openwrt', 'source_date_epoch': 1234, 'image_sha256': hashlib.sha256(payload).hexdigest(),
                      'compressed_sha256': sha256(self.image), 'application_source_sha256': sha256(self.source)}
         self.report = {'image_sha256': self.info['image_sha256'], 'checks': dict.fromkeys(REQUIRED_CHECKS, 'not_run'),
                        'build_checks': dict.fromkeys(BUILD_CHECKS, 'passed'), 'notes': 'Synthetic unit-test fixture'}
+        self.lock = make_lock(self.info, json.dumps(self.info).encode(),
+            ('PKG_VERSION:=0.1.0\nPKG_SOURCE_VERSION:=' + 'a' * 40 +
+             '\nPKG_HASH:=' + 'd' * 64 + '\nEINK_SOURCE_EPOCH:=1234\n').encode())
         self.save()
 
     def save(self):
         (self.root / 'build-info.json').write_text(json.dumps(self.info))
         (self.root / 'validation.json').write_text(json.dumps(self.report))
-        files = [self.image, self.source, self.root / 'build-info.json', self.root / 'validation.json']
+        (self.root / 'release-lock.json').write_text(json.dumps(self.lock))
+        files = [self.image, self.source, self.root / 'build-info.json', self.root / 'validation.json', self.root / 'release-lock.json']
         (self.root / 'SHA256SUMS').write_text(''.join(f'{sha256(p)}  {p.name}\n' for p in files))
 
     def review(self):
@@ -86,3 +95,22 @@ class GateTests(unittest.TestCase):
         self.report['distribution_review']['image_sha256'] = '0' * 64
         self.save()
         self.assertTrue(check_assets(self.root, 'prerelease'))
+
+    def test_hardware_commit_cannot_drift(self):
+        self.lock['hardware']['commit'] = 'e' * 40
+        self.save()
+        self.assertIn('Version lock mismatch: hardware commit', check_assets(self.root))
+
+    def test_hardware_package_must_pin_same_application(self):
+        self.lock['hardware']['package']['application_commit'] = 'e' * 40
+        self.save()
+        self.assertIn('Version lock mismatch: package application commit', check_assets(self.root))
+
+    def test_sdk_project_revision_cannot_drift(self):
+        self.info['sdk_projects'][0]['commit'] = 'e' * 40
+        self.save()
+        self.assertIn('Version lock mismatch: SDK projects', check_assets(self.root))
+
+    def test_missing_version_lock_rejected(self):
+        (self.root / 'release-lock.json').unlink()
+        self.assertTrue(check_assets(self.root))

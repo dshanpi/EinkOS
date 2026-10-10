@@ -5,6 +5,7 @@ import hashlib
 import json
 from pathlib import Path
 import re
+from version_lock import projects_digest
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -48,6 +49,13 @@ def check():
     for name, _ in cases:
         if not (output / (name + '.png')).is_file():
             failures.append('Missing screenshot: ' + name)
+    for record in (ROOT / 'releases').glob('v*.json'):
+        if record.stem.endswith('-sdk'):
+            continue
+        lock = json.loads(record.read_text())
+        sdk = json.loads(record.with_name(record.stem + '-sdk.json').read_text())
+        if lock['release'] != record.stem or projects_digest(sdk) != lock['sdk']['projects_sha256']:
+            failures.append(f'Committed release/SDK record mismatch: {record.name}')
     docs = [ROOT / 'README.md', ROOT / 'AGENTS.md', ROOT / 'CONTRIBUTING.md']
     docs += list((ROOT / 'docs').glob('*.md')) + list((ROOT / 'skills').rglob('SKILL.md'))
     for doc in docs:

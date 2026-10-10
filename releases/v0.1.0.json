@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "release": "v0.1.0",
+  "application": {
+    "repository": "https://github.com/dshanpi/EinkOS",
+    "tag": "v0.1.0",
+    "commit": "087cbaf80cebcbc5d101d37ab3520b3c6fe461c5"
+  },
+  "hardware": {
+    "repository": "https://github.com/DongshanPI/100ASK_T113-PRO_TinaSDK5",
+    "branch": "einkos-240x360",
+    "tag": "einkos-v0.1.0",
+    "commit": "d24ebd7af24d4b07b0912b19f06a6dad22123eb5",
+    "package": {
+      "path": "openwrt/package/thirdparty/gui/eink-dashboard/Makefile",
+      "sha256": "def7a7452b89fbaf08d5a729b4fd7e5d0f925ef09f5d3f7a41e2d7f65e567e88",
+      "application_version": "0.1.0",
+      "application_commit": "087cbaf80cebcbc5d101d37ab3520b3c6fe461c5",
+      "github_archive_sha256": "654edf790410e2b4008b87389639e92c9185fc5aff8c1b6b6105b01cac374ef7",
+      "source_date_epoch": 1791620123
+    }
+  },
+  "sdk": {
+    "baseline": "TinaSDK 5.0 v1.2",
+    "projects_file": "build-info.json",
+    "projects_field": "sdk_projects",
+    "project_count": 122,
+    "projects_sha256": "06888ad4af9091e4e97867a1b26367295095e3975ddb86674ae81c6ced6efc57",
+    "modified_project_count": 5
+  },
+  "build": {
+    "board": "100ask-t113-pro-240x360",
+    "chip": "t113",
+    "board_config": "evb1_auto_nand",
+    "kernel": "linux-5.4",
+    "rootfs": "openwrt"
+  },
+  "build_info_sha256": "b28526854a3c4fa56e613c79ecdb73fd285896952fe0a441fcb96a2a414cf187",
+  "image": {
+    "file": "EinkOS-v0.1.0-100ask-t113-pro-240x360.img.gz",
+    "sha256": "f36d2baebeb95f60fa70680f6782de42f3d4018f8b8c75d16cf727f273794c10",
+    "uncompressed_sha256": "f9e73d80b03c7af3df8ca8935a1fd45309ed0355ea5d2c2a33b4871471a8f3fb"
+  },
+  "source": {
+    "file": "EinkOS-v0.1.0-source.tar.gz",
+    "sha256": "e2f6e38e0ff78ca6474542659cb4f30b4587e505d92efe15ad18e0fd1a95d46b"
+  }
+}

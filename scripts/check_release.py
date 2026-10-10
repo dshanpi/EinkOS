@@ -8,6 +8,7 @@ from pathlib import Path
 import re
 import tarfile
 from release import BOARD, REQUIRED_CHECKS, sha256
+from version_lock import validate_lock
 
 BUILD_CHECKS = ['logic_tests', 'release_tool_tests', 'standalone_source_build',
                 'arm_application_build', 'openwrt_image_build', 'firmware_pack',
@@ -29,7 +30,7 @@ def check_assets(directory, channel='draft'):
             return ['Application commit must be a full SHA-1']
         image_name = f'EinkOS-v{version}-{BOARD}.img.gz'
         source_name = f'EinkOS-v{version}-source.tar.gz'
-        required = {image_name, source_name, 'build-info.json', 'validation.json'}
+        required = {image_name, source_name, 'build-info.json', 'validation.json', 'release-lock.json'}
         checksums = {}
         for line in (root / 'SHA256SUMS').read_text().splitlines():
             digest, name = line.split(None, 1)
@@ -44,6 +45,8 @@ def check_assets(directory, channel='draft'):
                 failures.append(f'Checksum mismatch: {name}')
         if failures:
             return failures
+        lock = json.loads((root / 'release-lock.json').read_text())
+        failures.extend(validate_lock(lock, info, (root / 'build-info.json').read_bytes()))
         if checksums[image_name] != info['compressed_sha256'] or checksums[source_name] != info['application_source_sha256']:
             failures.append('Build metadata does not match source/image assets')
         digest = hashlib.sha256()

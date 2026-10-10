@@ -66,3 +66,5 @@ make DESTDIR=/path/to/rootfs install
 现有连接服务本地协议保持版本及布局不变。
 厂商网络和蓝牙调用集中在 `platforms/tina/connectd.c`，屏幕访问在
 `platforms/tina/epd_disp.c`。新平台需提供适配实现，首版不宣称已支持。
+
+具体 Release 对应的应用标签、硬件分支/标签、SDK 组件和镜像哈希见 [版本关联](VERSIONS.md)。

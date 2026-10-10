@@ -13,6 +13,20 @@
 [使用指南](docs/USER_GUIDE.md) · [构建](docs/BUILD.md) · [架构](docs/ARCHITECTURE.md) ·
 [开发要求](docs/DEVELOPMENT.md) · [发布门禁](docs/RELEASING.md) · [仓库边界](docs/REPOSITORIES.md)
 
+## 当前镜像对应的源码版本
+
+| 项目 | v0.1.0 对应版本 |
+| --- | --- |
+| 应用 | [`v0.1.0` · `087cbaf`](https://github.com/dshanpi/EinkOS/tree/087cbaf80cebcbc5d101d37ab3520b3c6fe461c5) |
+| 硬件开发分支 | [`einkos-240x360`](https://github.com/DongshanPI/100ASK_T113-PRO_TinaSDK5/tree/einkos-240x360) |
+| 硬件固定版本 | [`einkos-v0.1.0` · `d24ebd7`](https://github.com/DongshanPI/100ASK_T113-PRO_TinaSDK5/tree/d24ebd7af24d4b07b0912b19f06a6dad22123eb5) |
+| SDK 基线 | TinaSDK 5.0 v1.2；[122 个组件的提交清单](releases/v0.1.0-sdk.json) |
+| 系统配置 | `t113 / evb1_auto_nand / linux-5.4 / openwrt` |
+
+[版本锁定文件](releases/v0.1.0.json) 将两个仓库的提交、SDK 清单和镜像 SHA-256 绑定。
+复现发布版本时使用固定标签/提交，不能直接使用两个分支的最新代码。
+关联方式、获取命令及当前 SDK 补丁记录限制见 [版本关联说明](docs/VERSIONS.md)。
+
 ## 全部 UI 页面与主要状态
 
 以下 **29 张截图**覆盖全部 11 个桌面路由、阅读/连接/异常等主要状态，以及手机配网网页。
@@ -145,7 +159,7 @@ python3 scripts/check_docs.py
 
 | 阶段 | 必须满足 |
 | --- | --- |
-| Draft 草稿 | 完整源码包和 `.img.gz`、校验和、构建/验证记录；版本、提交及镜像哈希一致 |
+| Draft 草稿 | 应用源码包和 `.img.gz`、校验和、构建/验证记录、版本锁；应用/硬件标签、SDK 清单、包配方与镜像哈希一致 |
 | 公开预发布 | 草稿检查通过；构建测试全部通过；完整对应源码/厂商说明审核有证据；未测硬件项目明确标记，不能有已知失败项 |
 | 正式版 | 预发布条件全部满足；冷启动、按键、显示、阅读、网络、时间、蓝牙降级及 LYNX 烧录全部验收通过 |
 

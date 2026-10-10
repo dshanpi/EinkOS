@@ -13,6 +13,7 @@ gh release download "$tag" --repo dshanpi/EinkOS --dir "$release_tmp"
 python3 scripts/check_release.py "$release_tmp" --channel "$channel"
 version=$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["version"])' "$release_tmp/build-info.json")
 [ "$tag" = "v$version" ] || { echo 'Tag does not match assets' >&2; exit 1; }
+python3 scripts/version_lock.py "$release_tmp" --verify-remote
 if [ "$channel" = stable ]; then
   gh release edit "$tag" --repo dshanpi/EinkOS --draft=false --prerelease=false
 else

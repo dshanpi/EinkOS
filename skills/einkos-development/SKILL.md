@@ -29,7 +29,9 @@ Run `python3 scripts/check_docs.py`. Do not launch production connectd on a work
 
 ## Releases
 
-Follow [RELEASING](../../docs/RELEASING.md). Build assets identify the exact application and hardware
+Follow [RELEASING](../../docs/RELEASING.md) and [version linkage](../../docs/VERSIONS.md).
+Bind application tag, hardware tag/recipe, SDK component revisions and image hashes in release-lock.json;
+verify both remote tags and the pinned hardware recipe before uploading or promoting. Never move a release tag. Build assets identify the exact application and hardware
 commits, not today's documentation HEAD. Validate draft assets with `scripts/check_release.py`.
 For an authorized public promotion use `scripts/promote-release.sh`; it downloads and checks the
 actual remote assets. Public prereleases require build and distribution-source evidence; stable
