@@ -1,0 +1,6 @@
+LVGL 8.3.1, preserved from the working TinaSDK LVGL tree.
+Upstream: https://github.com/lvgl/lvgl
+SDK repository: platform/thirdparty/gui/lvgl-8
+SDK commit: e8677a22243f0f2dcc341f70908817ab1b3f0d31
+Included: src/, lvgl.h, lv_conf_template.h, LICENCE.txt
+No source changes made during extraction.

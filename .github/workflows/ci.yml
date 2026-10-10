@@ -1,0 +1,23 @@
+name: Application checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: make test
+      - run: make -j2 eink-dashboard
+      - run: ./eink-dashboard --version
+      - run: python3 scripts/source_archive.py --output dist
+      - name: Build from standalone source archive
+        run: |
+          mkdir /tmp/einkos-source
+          tar -xzf dist/EinkOS-v*-source.tar.gz -C /tmp/einkos-source --strip-components=1
+          make -C /tmp/einkos-source test
+          make -C /tmp/einkos-source -j2 eink-dashboard
+      - uses: actions/upload-artifact@v4
+        with:
+          name: source
+          path: dist/*

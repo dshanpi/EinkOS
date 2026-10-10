@@ -1,0 +1,28 @@
+EinkOS third-party notices
+
+EinkOS application: GPL-3.0-only; see LICENSE. Extracted from the
+DongshanPI/100ASK_T113-PRO_TinaSDK5 einkos-240x360 application at
+0709281b6b292bc6ead53666584521e3f1abe1e7. Historical application packaging
+used the MIT identifier; this independent release uses GPL-3.0-only.
+Existing third-party notices and grants are retained.
+
+LVGL 8.3.1: Copyright (c) 2021 LVGL Kft, MIT.
+https://github.com/lvgl/lvgl
+See third_party/lvgl/ORIGIN and LICENSES/LVGL-MIT.txt.
+The previous SDK notice said 8.3.2; the actual source declares 8.3.1.
+
+Source Han Sans SC glyph subset (src/font_cjk_16.c):
+Copyright 2014-2021 Adobe, SIL Open Font License 1.1.
+https://github.com/adobe-fonts/source-han-sans
+See LICENSES/OFL-1.1.txt. The generated subset retains OFL licensing.
+
+include/uapi/epd_100ask.h: GPL-2.0 WITH Linux-syscall-note.
+Copied without ABI changes from the hardware repository commit above,
+kernel/linux-5.4/include/uapi/linux/epd_100ask.h.
+The kernel driver is maintained and licensed separately in that repository.
+
+Tina runtime dependencies (not bundled in this application source):
+Allwinner btmanager-v4.0 headers/libbtmg, /bin/wifi, OpenWrt procd,
+iw, dnsmasq, ntpd and the target C library. They retain their own licenses.
+The board SDK supplies these dependencies; see docs/SOURCES.md for firmware
+source provenance and binary-component release requirements.

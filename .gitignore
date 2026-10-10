@@ -1,0 +1,6 @@
+/build/
+/dist/
+/eink-dashboard
+/eink-connectd
+__pycache__/
+*.pyc
