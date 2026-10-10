@@ -4,3 +4,5 @@
 /eink-connectd
 __pycache__/
 *.pyc
+*.o
+*.d
