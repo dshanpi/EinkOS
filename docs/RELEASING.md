@@ -121,3 +121,6 @@ scripts/promote-release.sh v0.1.0 stable
 包配方引用的应用版本/提交/源码时间，以及镜像/应用源码包哈希；上传与公开前再通过
 GitHub API 解析两个远端标签，并读取硬件固定提交中的实际包配方进行比较。
 `release-lock.json` 也必须纳入 SHA256SUMS。缺标签、标签错位或配方不匹配都会拒绝发布。
+
+后续 Linux 板卡统一采用 [DSP-LINUX-001](../standards/linux-board-release/README.md)，
+按新板接入表建立板卡配置与适配工具；现有 T113 版本保持原始身份与验证记录。

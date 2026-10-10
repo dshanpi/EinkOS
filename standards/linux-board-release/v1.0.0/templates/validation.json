@@ -1,0 +1,118 @@
+{
+  "schema": "dsp-linux-validation-v1",
+  "board_id": "REPLACE_BOARD_ID",
+  "image_sha256": null,
+  "device": {
+    "model": null,
+    "revision": null,
+    "test_unit_id": null
+  },
+  "environment": {
+    "lynx_version": null,
+    "host_os": null
+  },
+  "build_checks": [
+    {
+      "id": "logic_tests",
+      "status": "not_run",
+      "tester": null,
+      "tested_at": null,
+      "evidence": [],
+      "not_applicable_reason": null
+    },
+    {
+      "id": "release_tool_tests",
+      "status": "not_run",
+      "tester": null,
+      "tested_at": null,
+      "evidence": [],
+      "not_applicable_reason": null
+    },
+    {
+      "id": "standalone_source_build",
+      "status": "not_run",
+      "tester": null,
+      "tested_at": null,
+      "evidence": [],
+      "not_applicable_reason": null
+    },
+    {
+      "id": "target_application_build",
+      "status": "not_run",
+      "tester": null,
+      "tested_at": null,
+      "evidence": [],
+      "not_applicable_reason": null
+    },
+    {
+      "id": "system_image_build",
+      "status": "not_run",
+      "tester": null,
+      "tested_at": null,
+      "evidence": [],
+      "not_applicable_reason": null
+    },
+    {
+      "id": "firmware_pack",
+      "status": "not_run",
+      "tester": null,
+      "tested_at": null,
+      "evidence": [],
+      "not_applicable_reason": null
+    },
+    {
+      "id": "image_application_identity",
+      "status": "not_run",
+      "tester": null,
+      "tested_at": null,
+      "evidence": [],
+      "not_applicable_reason": null
+    }
+  ],
+  "hardware_checks": [
+    {
+      "id": "lynx_flash",
+      "status": "not_run",
+      "tester": null,
+      "tested_at": null,
+      "evidence": [],
+      "not_applicable_reason": null
+    },
+    {
+      "id": "cold_boot",
+      "status": "not_run",
+      "tester": null,
+      "tested_at": null,
+      "evidence": [],
+      "not_applicable_reason": null
+    },
+    {
+      "id": "storage_layout",
+      "status": "not_run",
+      "tester": null,
+      "tested_at": null,
+      "evidence": [],
+      "not_applicable_reason": null
+    },
+    {
+      "id": "recovery",
+      "status": "not_run",
+      "tester": null,
+      "tested_at": null,
+      "evidence": [],
+      "not_applicable_reason": null
+    }
+  ],
+  "capability_checks": [],
+  "distribution_review": {
+    "status": "pending",
+    "reviewer": null,
+    "reviewed_at": null,
+    "image_sha256": null,
+    "source_url": null,
+    "vendor_notices_url": null,
+    "evidence": []
+  },
+  "known_issues": [],
+  "notes": "Template only. Add capability checks from the board profile; do not infer passed results."
+}

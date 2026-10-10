@@ -1,0 +1,74 @@
+{
+  "schema": "dsp-linux-board-v1",
+  "standard": {
+    "id": "DSP-LINUX-001",
+    "version": "1.0.0"
+  },
+  "profile_version": "0.1.0",
+  "product": "REPLACE_PRODUCT_ID",
+  "board_id": "REPLACE_BOARD_ID",
+  "status": "planned",
+  "hardware": {
+    "model": "REPLACE_MODEL",
+    "revision": "REPLACE_REVISION",
+    "soc": "REPLACE_SOC",
+    "architecture": "REPLACE_ARCH",
+    "storage": {
+      "type": "REPLACE_STORAGE",
+      "minimum_bytes": null,
+      "partition_layout": "REPLACE_PATH"
+    },
+    "display": {
+      "present": null,
+      "type": null,
+      "width": null,
+      "height": null
+    },
+    "input": []
+  },
+  "capabilities": {
+    "wifi": null,
+    "bluetooth": null,
+    "ethernet": null,
+    "rtc": null
+  },
+  "repositories": {
+    "application": "REPLACE_URL",
+    "hardware": "REPLACE_URL",
+    "hardware_branch": "REPLACE_BRANCH",
+    "releases": "REPLACE_URL"
+  },
+  "sdk": {
+    "name": "REPLACE_SDK",
+    "baseline": "REPLACE_BASELINE",
+    "build_system": "REPLACE_BUILD_SYSTEM"
+  },
+  "build": {
+    "target": "REPLACE_TARGET",
+    "kernel": "REPLACE_KERNEL",
+    "rootfs": "REPLACE_ROOTFS",
+    "toolchain": "REPLACE_TOOLCHAIN_ID",
+    "configure_commands": [],
+    "build_commands": [],
+    "pack_commands": []
+  },
+  "installation": {
+    "tool_repository": "https://github.com/dshanpi/lynx-releases",
+    "support_confirmed": false,
+    "tested_tool_version": null,
+    "host_os": null,
+    "flash_mode": null,
+    "instructions": "REPLACE_DOCUMENT",
+    "recovery_instructions": "REPLACE_DOCUMENT"
+  },
+  "validation": {
+    "required_hardware_checks": [
+      "lynx_flash",
+      "cold_boot",
+      "storage_layout",
+      "recovery"
+    ],
+    "capability_checks": [],
+    "not_applicable": []
+  }
+}

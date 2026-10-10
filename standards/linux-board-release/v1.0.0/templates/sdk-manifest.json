@@ -1,0 +1,30 @@
+{
+  "schema": "dsp-linux-sdk-v1",
+  "board_id": "REPLACE_BOARD_ID",
+  "baseline": "REPLACE_BASELINE",
+  "input_capture_complete": false,
+  "projects": [
+    {
+      "path": "REPLACE_COMPONENT_PATH",
+      "source_url": "REPLACE_ACCESSIBLE_SOURCE_URL",
+      "commit": null,
+      "git_object_format": "sha1",
+      "source_archive_sha256": null
+    }
+  ],
+  "overlays": [
+    {
+      "repository": "REPLACE_HARDWARE_URL",
+      "commit": null,
+      "application_order": 1
+    }
+  ],
+  "patches": [],
+  "extra_inputs": [],
+  "excluded_paths": [],
+  "source_distribution": {
+    "complete": false,
+    "source_url": null,
+    "vendor_notices_url": null
+  }
+}

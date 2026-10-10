@@ -14,3 +14,7 @@
   Use [release gates](docs/RELEASING.md); never label missing hardware tests as passed or drafts as public downloads.
 - Firmware binaries belong in GitHub Release assets, not Git. Installation points users to
   https://github.com/dshanpi/lynx-releases. Preserve third-party licenses and don't commit personal device data.
+
+- For new Linux boards or general release-process work, use [DSP-LINUX-001](standards/linux-board-release/README.md)
+  and [linux-board-release](skills/linux-board-release/SKILL.md). Existing T113 releases retain their recorded schema and evidence;
+  a standards document alone does not implement multi-board support.

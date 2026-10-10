@@ -38,3 +38,6 @@ actual remote assets. Public prereleases require build and distribution-source e
 releases additionally require all hardware checks including LYNX flashing. Never fabricate test results.
 If a remote write has an ambiguous failure, inspect the release before retrying; do not overwrite
 published assets. Report unmet evidence as the exact gate result and continue independent authorized work.
+
+For another Linux board, use the [shared standard](../../standards/linux-board-release/README.md)
+with its board-specific adapter requirements; do not extend T113 constants and claim generic support.

@@ -1,0 +1,97 @@
+{
+  "schema": "dsp-linux-release-v1",
+  "standard": {
+    "id": "DSP-LINUX-001",
+    "version": "1.0.0"
+  },
+  "product": "REPLACE_PRODUCT_ID",
+  "release_version": "REPLACE_VERSION",
+  "application": {
+    "repository": "REPLACE_URL",
+    "tag": "vREPLACE_VERSION",
+    "commit": null,
+    "git_object_format": "sha1",
+    "version": "REPLACE_ACTUAL_APP_VERSION",
+    "source_archive": {
+      "file": "REPLACE_PRODUCT-vREPLACE_VERSION-source.tar.gz",
+      "sha256": null
+    }
+  },
+  "boards": [
+    {
+      "board_id": "REPLACE_BOARD_ID",
+      "hardware": {
+        "repository": "REPLACE_URL",
+        "branch": "REPLACE_BRANCH",
+        "tag": "REPLACE_PRODUCT-vREPLACE_VERSION--REPLACE_BOARD_ID",
+        "commit": null,
+        "git_object_format": "sha1",
+        "integration": {
+          "path": "REPLACE_RECIPE_PATH",
+          "sha256": null,
+          "application_commit": null,
+          "application_version": null,
+          "source_archive_url": "REPLACE_PINNED_URL",
+          "source_archive_sha256": null
+        }
+      },
+      "profile": {
+        "file": "board-profile-REPLACE_BOARD_ID.json",
+        "version": "REPLACE_PROFILE_VERSION",
+        "sha256": null
+      },
+      "sdk_manifest": {
+        "file": "sdk-manifest-REPLACE_BOARD_ID.json",
+        "sha256": null
+      },
+      "build_info": {
+        "file": "build-info-REPLACE_BOARD_ID.json",
+        "sha256": null
+      },
+      "image": {
+        "file": "REPLACE_PRODUCT-vREPLACE_VERSION-REPLACE_BOARD_ID.img.gz",
+        "sha256": null,
+        "uncompressed_sha256": null
+      },
+      "validation_file": "validation-REPLACE_BOARD_ID.json"
+    }
+  ],
+  "artifacts": [
+    {
+      "role": "application_source",
+      "board_id": null,
+      "file": "REPLACE_PRODUCT-vREPLACE_VERSION-source.tar.gz",
+      "sha256": null
+    },
+    {
+      "role": "image",
+      "board_id": "REPLACE_BOARD_ID",
+      "file": "REPLACE_PRODUCT-vREPLACE_VERSION-REPLACE_BOARD_ID.img.gz",
+      "sha256": null
+    },
+    {
+      "role": "board_profile",
+      "board_id": "REPLACE_BOARD_ID",
+      "file": "board-profile-REPLACE_BOARD_ID.json",
+      "sha256": null
+    },
+    {
+      "role": "sdk_manifest",
+      "board_id": "REPLACE_BOARD_ID",
+      "file": "sdk-manifest-REPLACE_BOARD_ID.json",
+      "sha256": null
+    },
+    {
+      "role": "build_info",
+      "board_id": "REPLACE_BOARD_ID",
+      "file": "build-info-REPLACE_BOARD_ID.json",
+      "sha256": null
+    },
+    {
+      "role": "validation",
+      "board_id": "REPLACE_BOARD_ID",
+      "file": "validation-REPLACE_BOARD_ID.json",
+      "sha256": null
+    }
+  ]
+}

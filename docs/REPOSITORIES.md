@@ -35,3 +35,6 @@ README、截图、技能等文档更新可以晚于既有固件提交；不能�
 保留板型、应用提交、硬件提交和镜像 SHA-256，不复制维护相同代码。
 
 具体 Release 对应的应用标签、硬件分支/标签、SDK 组件和镜像哈希见 [版本关联](VERSIONS.md)。
+
+后续 Linux 板卡统一采用 [DSP-LINUX-001](../standards/linux-board-release/README.md)，
+按新板接入表建立板卡配置与适配工具；现有 T113 版本保持原始身份与验证记录。

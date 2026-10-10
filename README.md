@@ -13,6 +13,14 @@
 [使用指南](docs/USER_GUIDE.md) · [构建](docs/BUILD.md) · [架构](docs/ARCHITECTURE.md) ·
 [开发要求](docs/DEVELOPMENT.md) · [发布门禁](docs/RELEASING.md) · [仓库边界](docs/REPOSITORIES.md)
 
+## 后续 Linux 开发板统一规范
+
+后续板卡沿用 **[DSP-LINUX-001 / 1.0.0](standards/linux-board-release/README.md)**：
+仓库边界、应用/硬件/SDK/镜像关联、逐板发布资产、LYNX 安装、验收门禁和文档/截图要求。
+提供新板接入检查表、5 份 JSON 模板、README/发布说明/AGENTS 模板及
+[跨板开发 Skill](skills/linux-board-release/SKILL.md)。当前发布脚本仍为 T113 专用，
+其他板需实现自己的构建/校验适配；规范不会改变旧版本的镜像和验收事实。
+
 ## 当前镜像对应的源码版本
 
 | 项目 | v0.1.0 对应版本 |

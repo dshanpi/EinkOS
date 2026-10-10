@@ -57,7 +57,7 @@ def check():
         if lock['release'] != record.stem or projects_digest(sdk) != lock['sdk']['projects_sha256']:
             failures.append(f'Committed release/SDK record mismatch: {record.name}')
     docs = [ROOT / 'README.md', ROOT / 'AGENTS.md', ROOT / 'CONTRIBUTING.md']
-    docs += list((ROOT / 'docs').glob('*.md')) + list((ROOT / 'skills').rglob('SKILL.md'))
+    docs += list((ROOT / 'docs').rglob('*.md')) + list((ROOT / 'standards').rglob('*.md')) + list((ROOT / 'skills').rglob('SKILL.md'))
     for doc in docs:
         links = re.findall(r'\]\(([^)]+)\)|src="([^"]+)"', doc.read_text())
         for markdown, html in links:

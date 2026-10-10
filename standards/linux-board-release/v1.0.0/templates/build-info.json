@@ -1,0 +1,31 @@
+{
+  "schema": "dsp-linux-build-v1",
+  "board_id": "REPLACE_BOARD_ID",
+  "release_version": "REPLACE_VERSION",
+  "application_commit": null,
+  "hardware_commit": null,
+  "profile_sha256": null,
+  "sdk_manifest_sha256": null,
+  "target_configuration": "REPLACE_TARGET",
+  "toolchain": {
+    "version": null,
+    "source_url": null,
+    "sha256": null
+  },
+  "environment": {
+    "host_os": null,
+    "container_digest": null
+  },
+  "commands": [],
+  "started_at": null,
+  "finished_at": null,
+  "logs": [],
+  "image_sha256": null,
+  "image_content_check": {
+    "status": "not_run",
+    "installed_application_version": null,
+    "installed_application_commit": null,
+    "method": null,
+    "evidence": []
+  }
+}
