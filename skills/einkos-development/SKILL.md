@@ -1,6 +1,6 @@
 ---
 name: einkos-development
-description: Develop EinkOS desktop applications, regenerate its real UI screenshots, or prepare and validate its firmware releases. Use within the EinkOS project; route kernel, device-tree and bootloader changes to the separate hardware repository.
+description: Develop EinkOS desktop applications, regenerate its real UI screenshots, or prepare and validate its application or firmware releases. Use within the EinkOS project; route kernel, device-tree and bootloader changes to the separate hardware repository.
 ---
 
 # EinkOS development
@@ -29,15 +29,21 @@ Run `python3 scripts/check_docs.py`. Do not launch production connectd on a work
 
 ## Releases
 
-Follow [RELEASING](../../docs/RELEASING.md) and [version linkage](../../docs/VERSIONS.md).
-Bind application tag, hardware tag/recipe, SDK component revisions and image hashes in release-lock.json;
-verify both remote tags and the pinned hardware recipe before uploading or promoting. Never move a release tag. Build assets identify the exact application and hardware
-commits, not today's documentation HEAD. Validate draft assets with `scripts/check_release.py`.
-For an authorized public promotion use `scripts/promote-release.sh`; it downloads and checks the
-actual remote assets. Public prereleases require build and distribution-source evidence; stable
-releases additionally require all hardware checks including LYNX flashing. Never fabricate test results.
-If a remote write has an ambiguous failure, inspect the release before retrying; do not overwrite
-published assets. Report unmet evidence as the exact gate result and continue independent authorized work.
+Classify the change with [DSP-LINUX-001 1.1.0](../../standards/linux-board-release/v1.1.0/SPEC.md)
+and [RELEASING](../../docs/RELEASING.md) first. Compatible application-only releases do not require a new
+hardware commit/tag, SDK build or system image. Bind the application commit/packages to supported system contracts,
+architecture/dependencies, update paths and actual upgrade/rollback evidence. Preserve system baseline provenance
+and record the currently installed app separately. Do not bundle base-system changes as app updates.
+
+Before application updates are public, require trusted signature and compatibility rejection, package boundaries,
+transaction recovery, health-based rollback and user-data preservation checks on declared baselines. Current
+scripts are system-only and the updater/application gates are not implemented; never infer OTA support from this skill.
+
+For system images, follow [version linkage](../../docs/VERSIONS.md). Bind preinstalled application, hardware recipe,
+SDK inputs and image hashes; check both remote tags and the actual hardware recipe. Use the existing system asset
+checker and promotion script only for supported system formats. Source/distribution and hardware evidence gates remain.
+Never move tags, overwrite public assets or fabricate tests. If a remote write is ambiguous, inspect the result
+before retrying. Existing user authorization persists; this workflow does not authorize unrelated actions.
 
 For another Linux board, use the [shared standard](../../standards/linux-board-release/README.md)
 with its board-specific adapter requirements; do not extend T113 constants and claim generic support.

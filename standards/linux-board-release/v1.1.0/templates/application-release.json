@@ -1,0 +1,85 @@
+{
+  "schema": "einkos-application-release-v1",
+  "release_kind": "application",
+  "standard": {
+    "id": "DSP-LINUX-001",
+    "version": "1.1.0"
+  },
+  "product": "EinkOS",
+  "application": {
+    "version": null,
+    "tag": null,
+    "commit": null,
+    "repository": "https://github.com/dshanpi/EinkOS"
+  },
+  "channel": null,
+  "update_sequence": null,
+  "auto_update_eligible": false,
+  "source": {
+    "file": "REPLACE_SOURCE.tar.gz",
+    "sha256": null
+  },
+  "build_info": {
+    "file": "application-build-info.json",
+    "sha256": null
+  },
+  "validation": {
+    "file": "application-validation.json",
+    "sha256": null
+  },
+  "targets": [
+    {
+      "target_id": null,
+      "architecture": null,
+      "calling_abi": null,
+      "libc": {
+        "name": null,
+        "supported_versions": []
+      },
+      "board_ids": [],
+      "system_contract": {
+        "family": null,
+        "supported_versions": [],
+        "sha256_by_version": {}
+      },
+      "required_interfaces": {},
+      "required_capabilities": [],
+      "runtime_dependencies": [],
+      "minimum_updater_version": null,
+      "tested_systems": [
+        {
+          "repository": null,
+          "tag": null,
+          "image_sha256": null,
+          "contract_sha256": null
+        }
+      ],
+      "upgrade_from_versions": [],
+      "payload": {
+        "file": "REPLACE_TARGET.tar.gz",
+        "sha256": null,
+        "size_bytes": null
+      },
+      "installation": {
+        "managed_root_id": null,
+        "file_list": [],
+        "hooks": [],
+        "transaction_contract": null,
+        "health_check": null,
+        "rollback": null
+      },
+      "data": {
+        "readable_schemas": [],
+        "writes_schema": null,
+        "migration": null,
+        "rollback_compatible": false,
+        "backup_and_restore": null
+      }
+    }
+  ],
+  "signature": {
+    "detached_file": "application-release.json.sig",
+    "key_id": null,
+    "format": null
+  }
+}

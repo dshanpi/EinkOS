@@ -1,18 +1,19 @@
 ---
 name: linux-board-release
-description: Apply the dshanpi Linux board open-source and release standard when onboarding another board or preparing a coordinated application, hardware, SDK and system-image release. Use for projects adopting DSP-LINUX-001; not for unrelated Linux administration or ordinary application-only edits.
+description: Apply the dshanpi Linux board open-source and release standard when onboarding another board or preparing independent application updates or coordinated system-image releases. Use for projects adopting DSP-LINUX-001; not for unrelated Linux administration or ordinary application-only edits.
 ---
 
 # Linux board releases
 
 Read the project's AGENTS.md. Use the pinned [standard entrypoint](../../standards/linux-board-release/README.md),
-then [onboarding checklist](../../standards/linux-board-release/v1.0.0/ONBOARDING.md) for the requested phase.
+and [current dual-release gates](../../standards/linux-board-release/v1.1.0/SPEC.md),
+then the system-specific [onboarding checklist](../../standards/linux-board-release/v1.0.0/ONBOARDING.md) for the requested phase.
 The standard and templates must travel with this skill at the same relative paths when reused in another repo.
 Do not install globally or change unrelated repositories just because the skill is present.
 
 ## New board
 
-Read the [specification](../../standards/linux-board-release/v1.0.0/SPEC.md) and
+For a new system baseline read the inherited [system specification](../../standards/linux-board-release/v1.0.0/SPEC.md) and
 [field contract](../../standards/linux-board-release/v1.0.0/CONTRACT.md).
 Create the project's board profile from the linked templates using observed hardware/SDK facts.
 Keep unknown values unresolved and label support as planned or in progress. Determine application versus board
@@ -22,16 +23,22 @@ Implement and test the board adapter: existing EinkOS release scripts are T113-s
 
 ## Release
 
-Pin application A; make the hardware integration recipe consume A and its source hash; pin hardware H.
-Capture SDK component identities, patches, configs and untracked build inputs, not only git status paths.
-Build from these inputs, verify the actual packaged image identity and bind test evidence to its image hash.
-Generate the release lock and per-board assets using the project's implemented adapter. Never fill test results
-from templates or infer hardware success from screenshots, host tests or a successful compiler invocation.
+Require release_kind: application or system. Use independent version/tag streams; preserve legacy tags.
+For application-only work with compatible base interfaces, do not require hardware churn, a rebuilt SDK or .img.gz.
+Declare the supported system contracts, architectures, dependencies and update/data paths; verify real target packages
+on the stated system baselines. Gate public app updates on trusted signatures, compatibility rejection, managed write
+boundaries, transaction/power-loss recovery, health/rollback, data preservation and channel/replay handling.
+Never disguise kernel, bootloader, partition, base-library or system-contract changes as application payloads.
+Current EinkOS updater/application tooling is pending; requirements and templates do not implement it.
 
-Verify remote tags and the actual recipe at H; after upload download and recheck actual remote assets.
-Keep pending source/distribution evidence in Draft; apply prerelease/stable gates per supported board.
-Preserve existing release images/tags and historical metadata. Record later documentation separately.
-For multi-board releases, use unique per-board filenames and independent evidence; one board's test does not cover another.
+For system releases, pin preinstalled application A and hardware H whose recipe references A; capture SDK component
+identities, patches, configs and untracked inputs. Build and verify the actual packaged image and bind evidence to its
+hash. A new system baseline introducing the updater must validate the initial installation and subsequent update/recovery
+chain. Existing systems retain their original A even when the running application later becomes A1.
+
+For either track, verify applicable remote tags and downloaded release assets. Never infer hardware or update success
+from a template, screenshot or successful compilation. Apply the appropriate draft/prerelease/stable gates to each target.
+Preserve published artifacts, tags and historical metadata; record later docs separately. One target's tests do not cover another.
 
 Perform only the work authorized by the user's task; existing authorization persists. This skill does not grant
 permission to flash hardware, publish externally or change global configuration. If a remote write is ambiguous,

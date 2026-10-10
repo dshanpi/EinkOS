@@ -1,0 +1,40 @@
+{
+  "schema": "einkos-system-contract-v1",
+  "release_kind": "system",
+  "standard": {
+    "id": "DSP-LINUX-001",
+    "version": "1.1.0"
+  },
+  "system_version": null,
+  "system_release": {
+    "repository": null,
+    "tag": null
+  },
+  "board_id": null,
+  "hardware_revision": null,
+  "architecture": null,
+  "calling_abi": null,
+  "libc": {
+    "name": null,
+    "version": null,
+    "loader": null
+  },
+  "contract_family": null,
+  "contract_version": null,
+  "interfaces": {
+    "epd_abi": null,
+    "service_contract": null
+  },
+  "capabilities": [],
+  "runtime_dependencies": [],
+  "updater": {
+    "version": null,
+    "protocol_version": null,
+    "trusted_key_ids": [],
+    "managed_application_roots": [],
+    "user_data_roots": [],
+    "health_check_contract": null,
+    "supports_transaction_recovery": false,
+    "supports_rollback": false
+  }
+}

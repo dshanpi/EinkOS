@@ -4,7 +4,7 @@
 | --- | --- |
 | [dshanpi/EinkOS](https://github.com/dshanpi/EinkOS) | 桌面、应用、连接服务、用户态适配、测试、使用文档、开发技能、截图及发布工具 |
 | [DongshanPI/100ASK_T113-PRO_TinaSDK5](https://github.com/DongshanPI/100ASK_T113-PRO_TinaSDK5/tree/einkos-240x360) | 内核驱动、设备树、Bootloader、板级配置、硬件测试工具、OpenWrt 集成及系统镜像构建 |
-| [EinkOS Releases](https://github.com/dshanpi/EinkOS/releases) | 每个版本的源码包、配套 `.img.gz` 系统镜像、校验和、构建/验证信息及版本说明 |
+| [EinkOS Releases](https://github.com/dshanpi/EinkOS/releases) | 应用版的源码与升级包；系统版的配套 `.img.gz`；各自的清单、校验和、构建/验收记录及说明 |
 | [dshanpi/lynx-releases](https://github.com/dshanpi/lynx-releases) | 用户统一获取 LYNX 安装及烧录工具的入口 |
 
 ## 应用与板级交界
@@ -17,7 +17,14 @@ EinkOS 维护应用自带的 procd 服务、默认配置、字体及示例书籍
 硬件仓库维护 OpenWrt 包配方、板级依赖选择和镜像布局；其中 `epd-test` 仍为硬件诊断工具。
 配方以完整应用提交和下载 SHA-256 锁定版本，不从浮动 main 构建发布固件。
 
-## 一次变更如何跨仓库
+## 独立应用发布
+
+底层接口不变时，EinkOS 只在应用仓库开发、构建、验证和发布升级包，不要求硬件仓库跟随提交，
+也不重建 SDK/镜像。应用清单声明系统契约、架构/依赖与升级路径，执行
+[应用更新门禁](../standards/linux-board-release/v1.1.0/SPEC.md)。系统镜像仍保留其出厂应用记录，
+设备当前应用版本另行维护。只有改变底层或制作新系统镜像时才走下面的跨仓库流程。
+
+## 系统镜像变更如何跨仓库
 
 1. 在 EinkOS 修改应用、测试、文档和对应截图，提交并通过 CI。
 2. 需要发新固件时，在硬件仓库更新应用版本、固定提交、归档哈希和源码时间。

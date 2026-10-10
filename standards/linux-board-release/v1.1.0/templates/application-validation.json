@@ -1,0 +1,124 @@
+{
+  "schema": "einkos-application-validation-v1",
+  "release_kind": "application",
+  "application_commit": null,
+  "targets": [
+    {
+      "target_id": null,
+      "payload_sha256": null,
+      "system_release": null,
+      "system_image_sha256": null,
+      "system_contract_sha256": null,
+      "updater_version": null,
+      "checks": [
+        {
+          "id": "target_build",
+          "status": "not_run",
+          "tester": null,
+          "tested_at": null,
+          "evidence": []
+        },
+        {
+          "id": "source_build",
+          "status": "not_run",
+          "tester": null,
+          "tested_at": null,
+          "evidence": []
+        },
+        {
+          "id": "source_review",
+          "status": "not_run",
+          "tester": null,
+          "tested_at": null,
+          "evidence": []
+        },
+        {
+          "id": "payload_boundary",
+          "status": "not_run",
+          "tester": null,
+          "tested_at": null,
+          "evidence": []
+        },
+        {
+          "id": "compatibility_rejection",
+          "status": "not_run",
+          "tester": null,
+          "tested_at": null,
+          "evidence": []
+        },
+        {
+          "id": "signature_and_tamper_rejection",
+          "status": "not_run",
+          "tester": null,
+          "tested_at": null,
+          "evidence": []
+        },
+        {
+          "id": "transaction_install",
+          "status": "not_run",
+          "tester": null,
+          "tested_at": null,
+          "evidence": []
+        },
+        {
+          "id": "power_loss_recovery",
+          "status": "not_run",
+          "tester": null,
+          "tested_at": null,
+          "evidence": []
+        },
+        {
+          "id": "health_failure_rollback",
+          "status": "not_run",
+          "tester": null,
+          "tested_at": null,
+          "evidence": []
+        },
+        {
+          "id": "user_data_preservation",
+          "status": "not_run",
+          "tester": null,
+          "tested_at": null,
+          "evidence": []
+        },
+        {
+          "id": "data_migration_and_rollback",
+          "status": "not_run",
+          "tester": null,
+          "tested_at": null,
+          "evidence": []
+        },
+        {
+          "id": "replay_and_downgrade_rejection",
+          "status": "not_run",
+          "tester": null,
+          "tested_at": null,
+          "evidence": []
+        },
+        {
+          "id": "channel_and_release_kind_isolation",
+          "status": "not_run",
+          "tester": null,
+          "tested_at": null,
+          "evidence": []
+        },
+        {
+          "id": "functional_regression",
+          "status": "not_run",
+          "tester": null,
+          "tested_at": null,
+          "evidence": []
+        }
+      ]
+    }
+  ],
+  "distribution_review": {
+    "status": "pending",
+    "reviewer": null,
+    "reviewed_at": null,
+    "source_url": null,
+    "bundled_dependencies_notices_url": null
+  },
+  "known_issues": [],
+  "notes": "Template only; no updater or release readiness is implied."
+}

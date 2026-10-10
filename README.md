@@ -15,11 +15,21 @@
 
 ## 后续 Linux 开发板统一规范
 
-后续板卡沿用 **[DSP-LINUX-001 / 1.0.0](standards/linux-board-release/README.md)**：
+后续板卡沿用 **[DSP-LINUX-001 / 1.1.0](standards/linux-board-release/README.md)**：
 仓库边界、应用/硬件/SDK/镜像关联、逐板发布资产、LYNX 安装、验收门禁和文档/截图要求。
 提供新板接入检查表、5 份 JSON 模板、README/发布说明/AGENTS 模板及
 [跨板开发 Skill](skills/linux-board-release/SKILL.md)。当前发布脚本仍为 T113 专用，
 其他板需实现自己的构建/校验适配；规范不会改变旧版本的镜像和验收事实。
+
+## 应用与系统分别发布
+
+**EinkOS 应用独立迭代，兼容的底层系统保持不变。** 应用 Release 提供升级包、兼容清单、
+源码及验证资料；只有底层系统变化才重建 `.img.gz`，通过 LYNX 安装。
+应用发布不要求新硬件提交或重新构建 SDK。每次系统镜像仍固定其预装应用及硬件/SDK 版本。
+
+[双发布线门禁](standards/linux-board-release/v1.1.0/SPEC.md) 规定系统接口兼容、可信签名、
+事务安装、断电恢复、失败回退和用户数据保护。当前设备更新器及应用发布工具尚未实现，
+本仓库现有发布脚本只处理历史 T113 系统镜像，不能宣称已支持在线自动升级。
 
 ## 当前镜像对应的源码版本
 
@@ -124,7 +134,7 @@ flowchart LR
 | --- | --- |
 | [dshanpi/EinkOS](https://github.com/dshanpi/EinkOS) | 桌面、应用、连接服务、用户态适配、测试、使用文档、开发技能、截图及发布工具 |
 | [DongshanPI/100ASK_T113-PRO_TinaSDK5](https://github.com/DongshanPI/100ASK_T113-PRO_TinaSDK5/tree/einkos-240x360) | 内核驱动、设备树、Bootloader、板级配置、硬件测试工具、OpenWrt 集成及系统镜像构建 |
-| [EinkOS Releases](https://github.com/dshanpi/EinkOS/releases) | 每个版本的源码包、配套 `.img.gz` 系统镜像、校验和、构建/验证信息及版本说明 |
+| [EinkOS Releases](https://github.com/dshanpi/EinkOS/releases) | 应用版的源码与升级包；系统版的配套 `.img.gz`；各自的清单、校验和、验证记录及说明 |
 | [dshanpi/lynx-releases](https://github.com/dshanpi/lynx-releases) | 用户统一获取 LYNX 安装及烧录工具的入口 |
 
 应用只在 EinkOS 维护。硬件仓库按固定应用提交和源码 SHA-256 构建，不保留第二份应用副本。
@@ -164,6 +174,9 @@ python3 scripts/check_docs.py
 - CI 检查逻辑测试、发布门禁测试、截图重现、页面覆盖、链接和独立源码构建。
 
 ## 发布门禁
+
+先区分 application 和 system，详见 [1.1.0 发布约束](standards/linux-board-release/v1.1.0/SPEC.md)。
+应用线不要求镜像或新硬件标签；以下表格及命令仅适用于现有 T113 系统镜像线。
 
 | 阶段 | 必须满足 |
 | --- | --- |
