@@ -3,15 +3,18 @@
 **面向墨水屏设备的开源 Linux 桌面与应用系统。**
 
 基于 C、LVGL 8.3.1 和 Linux 用户态接口，提供黑白手帐桌面、日历/农历、TXT 阅读器、
-手机 Wi-Fi 配网和蓝牙管理。首版支持 **100ASK T113-PRO + 3.52 英寸 240×360 单色墨水屏**，
+手机 Wi-Fi 配网和蓝牙管理。当前板卡为 **`100ask_t113s3-pro` + 3.52 英寸 240×360 单色墨水屏**，
 配套系统使用 TinaSDK / OpenWrt。
 
 **发布状态核对（2026-11-12）：GitHub v0.1.0 已标记为公开预发布。**
 仓库原有记录和发布说明仍包含实机验收、完整系统来源及厂商资料审核的未完成项；
 发布页可见不等于验收通过，暂不作为稳定版使用结论。安装前核对该版本的验证记录。
-首版不包含 OTA、其他分辨率或通用 PC 桌面。
+桌面采用应用独立发布与自动更新架构；实际可用能力以所装系统的更新器和验收记录为准。历史首版尚未交付 OTA 更新器、其他分辨率后端或通用 PC 桌面。
 
 [文档首页](docs/OVERVIEW.md) · [系统特性](docs/FEATURES.md) · [维护文档站](docs/SITE.md)
+
+[不同 Linux 系统安装](docs/SYSTEMS.md) · [应用发布与自动更新](docs/APPLICATION_OTA.md) ·
+[系统 OTA 与恢复](docs/SYSTEM_OTA.md) · [多板与屏幕接入](docs/BOARD_PORTING.md)
 
 [使用指南](docs/USER_GUIDE.md) · [构建](docs/BUILD.md) · [架构](docs/ARCHITECTURE.md) ·
 [开发要求](docs/DEVELOPMENT.md) · [发布门禁](docs/RELEASING.md) · [仓库边界](docs/REPOSITORIES.md)
@@ -204,7 +207,7 @@ python3 scripts/check_release.py dist --channel stable
 
 ## English
 
-EinkOS is an open-source Linux e-paper desktop and application suite for the 100ASK T113-PRO
+EinkOS is an open-source Linux e-paper desktop and application suite for the 100ask_t113s3-pro
 with a 240×360 monochrome panel. The gallery contains actual LVGL-rendered desktop captures
 and browser captures of the provisioning HTML, using fictional fixture data; they are not hardware photographs.
 Drivers and board support remain in the separate hardware repository. Firmware is distributed through

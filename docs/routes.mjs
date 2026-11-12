@@ -22,6 +22,12 @@ export const routes = [
     "title": "确认硬件与系统"
   },
   {
+    "source": "docs/SYSTEMS.md",
+    "slug": "systems",
+    "group": "开始使用",
+    "title": "在不同系统安装与使用"
+  },
+  {
     "source": "docs/INSTALL.md",
     "slug": "install",
     "group": "开始使用",
@@ -64,6 +70,12 @@ export const routes = [
     "title": "理解系统架构"
   },
   {
+    "source": "docs/BOARD_PORTING.md",
+    "slug": "board-porting",
+    "group": "开发与架构",
+    "title": "接入新板卡与屏幕"
+  },
+  {
     "source": "docs/BUILD.md",
     "slug": "build",
     "group": "开发与架构",
@@ -92,6 +104,18 @@ export const routes = [
     "slug": "screenshots",
     "group": "开发与架构",
     "title": "生成真实界面截图"
+  },
+  {
+    "source": "docs/APPLICATION_OTA.md",
+    "slug": "application-ota",
+    "group": "发布与维护",
+    "title": "接入应用发布与自动更新"
+  },
+  {
+    "source": "docs/SYSTEM_OTA.md",
+    "slug": "system-ota",
+    "group": "发布与维护",
+    "title": "区分应用与系统 OTA"
   },
   {
     "source": "docs/RELEASING.md",

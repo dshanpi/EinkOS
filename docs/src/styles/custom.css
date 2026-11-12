@@ -6,3 +6,7 @@ pre.mermaid svg { max-width: 100%; height: auto; }
 .asciinema-cast { margin-block: 1rem; }
 .sl-markdown-content .asciinema-cast svg { display: revert; }
 @media (min-width: 50rem) { .header > div:nth-child(2) { justify-content: flex-end; } }
+@media (max-width: 49.99rem) {
+  .sl-markdown-content table:has(th:nth-child(4)) :is(th, td) { min-width: 12rem; }
+  .sl-markdown-content table:has(th:nth-child(4)) :is(th, td):first-child { min-width: 7rem; }
+}

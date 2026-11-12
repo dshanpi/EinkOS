@@ -1,5 +1,7 @@
 # 发布流程与门禁
 
+操作与接入指南：[应用发布及自动更新](APPLICATION_OTA.md) · [系统 OTA 与恢复安装](SYSTEM_OTA.md) · [不同 Linux 系统](SYSTEMS.md) · [新板卡与屏幕](BOARD_PORTING.md)。应用自动更新由应用发布线和系统更新基线共同实现；系统 OTA 需额外的板级升级与启动恢复能力。
+
 ## 先选发布类型：应用升级或系统镜像
 
 当前约束为 [DSP-LINUX-001 / 1.1.0](../standards/linux-board-release/v1.1.0/SPEC.md)。

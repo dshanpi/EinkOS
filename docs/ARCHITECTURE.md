@@ -1,5 +1,7 @@
 # 桌面框架与实现
 
+不同系统与新目标的接入见[安装与运行环境](SYSTEMS.md)、[多板与屏幕适配](BOARD_PORTING.md)。桌面应用独立更新的职责、数据和服务边界见[应用 OTA](APPLICATION_OTA.md)，底层系统升级及启动恢复见[系统 OTA](SYSTEM_OTA.md)；下文描述当前源码中的桌面运行实现。
+
 EinkOS 是 C 编写的 LVGL 8.3.1 用户态桌面及应用集合，运行于现有 Linux / OpenWrt
 系统之上。它通过 Linux 输入事件、Unix socket 和 EPD 字符设备工作；首版没有
 窗口管理器、应用插件加载器、网页桌面、通用 framebuffer 后端或 PC 交互模拟器。
