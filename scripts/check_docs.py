@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 from version_lock import projects_digest
@@ -25,6 +26,17 @@ def record_phone():
                 'inputs': {name: digest(ROOT / name) for name in inputs},
                 'images': [{'file': path.name, 'sha256': digest(path)} for path in images]}
     (output / 'phone-manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
+
+
+def markdown_sources(directory):
+    """Exclude generated documentation and dependency trees from source checks."""
+    for parent, dirs, names in os.walk(directory):
+        dirs[:] = [name for name in dirs
+                   if name not in {'node_modules', 'dist', '.astro', '.git'}
+                   and not (Path(parent) / name == ROOT / 'docs/src/content/docs')]
+        for name in names:
+            if name.endswith('.md'):
+                yield Path(parent) / name
 
 
 def check():
@@ -57,7 +69,7 @@ def check():
         if lock['release'] != record.stem or projects_digest(sdk) != lock['sdk']['projects_sha256']:
             failures.append(f'Committed release/SDK record mismatch: {record.name}')
     docs = [ROOT / 'README.md', ROOT / 'AGENTS.md', ROOT / 'CONTRIBUTING.md']
-    docs += list((ROOT / 'docs').rglob('*.md')) + list((ROOT / 'standards').rglob('*.md')) + list((ROOT / 'skills').rglob('SKILL.md'))
+    docs += list(markdown_sources(ROOT / 'docs')) + list((ROOT / 'standards').rglob('*.md')) + list((ROOT / 'skills').rglob('SKILL.md'))
     for doc in docs:
         links = re.findall(r'\]\(([^)]+)\)|src="([^"]+)"', doc.read_text())
         for markdown, html in links:

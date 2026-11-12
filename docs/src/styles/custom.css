@@ -1,0 +1,8 @@
+:root { --sl-content-width: 60rem; }
+.sl-markdown-content table { width: 100%; }
+.sl-markdown-content img { max-width: 100%; height: auto; }
+pre.mermaid { background: none; border: none; overflow-x: auto; text-align: center; margin-block: 1.5rem; }
+pre.mermaid svg { max-width: 100%; height: auto; }
+.asciinema-cast { margin-block: 1rem; }
+.sl-markdown-content .asciinema-cast svg { display: revert; }
+@media (min-width: 50rem) { .header > div:nth-child(2) { justify-content: flex-end; } }

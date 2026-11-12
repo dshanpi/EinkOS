@@ -6,9 +6,12 @@
 手机 Wi-Fi 配网和蓝牙管理。首版支持 **100ASK T113-PRO + 3.52 英寸 240×360 单色墨水屏**，
 配套系统使用 TinaSDK / OpenWrt。
 
-**当前状态：v0.1.0 资产已准备为发布草稿；实机验收与完整系统源码/厂商资料审核尚未完成，
-暂不提供公开稳定版下载。** 草稿需仓库权限账号登录查看，公众发布页不会显示草稿附件。
-源码可正常获取，CI 和主机/交叉构建已通过。首版不包含 OTA、其他分辨率或通用 PC 桌面。
+**发布状态核对（2026-11-12）：GitHub v0.1.0 已标记为公开预发布。**
+仓库原有记录和发布说明仍包含实机验收、完整系统来源及厂商资料审核的未完成项；
+发布页可见不等于验收通过，暂不作为稳定版使用结论。安装前核对该版本的验证记录。
+首版不包含 OTA、其他分辨率或通用 PC 桌面。
+
+[文档首页](docs/OVERVIEW.md) · [系统特性](docs/FEATURES.md) · [维护文档站](docs/SITE.md)
 
 [使用指南](docs/USER_GUIDE.md) · [构建](docs/BUILD.md) · [架构](docs/ARCHITECTURE.md) ·
 [开发要求](docs/DEVELOPMENT.md) · [发布门禁](docs/RELEASING.md) · [仓库边界](docs/REPOSITORIES.md)
@@ -143,7 +146,7 @@ flowchart LR
 
 ## 安装配套 Linux 系统
 
-镜像公开后，从 [EinkOS Releases](https://github.com/dshanpi/EinkOS/releases) 获取对应板型的
+从 [EinkOS Releases](https://github.com/dshanpi/EinkOS/releases) 获取对应板型的
 `.img.gz` 和校验和，校验后解压得到 `.img`，统一使用
 [LYNX｜芯桥](https://github.com/dshanpi/lynx-releases) 烧录。
 **全量烧录会清除目标存储数据，先备份书籍与配置。** 不将 `.gz` 直接当作可烧录镜像。
@@ -206,4 +209,4 @@ with a 240×360 monochrome panel. The gallery contains actual LVGL-rendered desk
 and browser captures of the provisioning HTML, using fictional fixture data; they are not hardware photographs.
 Drivers and board support remain in the separate hardware repository. Firmware is distributed through
 EinkOS Releases and installed using [LYNX](https://github.com/dshanpi/lynx-releases).
-The current firmware is a draft pending hardware validation and complete system-source/distribution evidence.
+GitHub currently labels v0.1.0 as a public prerelease. The recorded hardware validation and system-source/distribution evidence remain incomplete.
